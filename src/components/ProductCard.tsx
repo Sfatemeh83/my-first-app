@@ -16,8 +16,8 @@ export default function ProductCard({ product: p, large = false }: { product: Pr
       </button>
       {p.badge && <span className="absolute left-1 top-3 z-10 text-[9px] tracking-[0.2em] uppercase text-gold">{p.badge}</span>}
       <Link to={`/product/${p.id}`} className="block" aria-label={`${p.name}, ${fmt(p.price)}`}>
-        <div className={`mx-auto flex items-end justify-center overflow-hidden bg-gradient-to-b from-transparent to-cream/60 ${large ? 'aspect-[4/5]' : 'aspect-[4/5]'}`}>
-          <Bottle style={p.style} title={`${p.name} Eau de Parfum`} className="h-[88%] pb-2 transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-translate-y-1" />
+        <div className="mx-auto flex aspect-[448/476] items-center justify-center overflow-hidden">
+          <Bottle style={p.style} title={`${p.name} Eau de Parfum`} className="h-full transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-translate-y-1" />
         </div>
         <h3 className="mt-4 text-[13px] tracking-[0.14em] font-sans font-normal text-espresso">{p.name}</h3>
         <p className="mt-1 text-[13px] text-ink/70">{fmt(p.price)}</p>

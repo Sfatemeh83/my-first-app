@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { Heart, Minus, Plus, RotateCcw, Truck, Check } from 'lucide-react'
 import Seo from '../components/Seo'
 import Bottle from '../components/Bottle'
-import Scene, { Flower, Sprig } from '../components/Scene'
+import Scene from '../components/Scene'
 import Accordion from '../components/Accordion'
 import ProductGrid from '../components/ProductGrid'
 import Reveal from '../components/Reveal'
@@ -21,9 +21,9 @@ export default function ProductPage() {
   const liked = wishlist.includes(p.id)
   const related = products.filter(x => x.id !== p.id).slice(0, 4)
   const views = [
-    <Scene key="a" tone="cream" className="w-full h-full grid place-items-center"><Bottle style={p.style} className="h-[82%]" title={p.name} /></Scene>,
-    <Scene key="b" tone="blush" className="w-full h-full grid place-items-center"><Flower size={150} className="absolute -left-6 bottom-6" /><Flower size={90} color="#EFB9B4" className="absolute right-6 bottom-4" /><Sprig className="absolute right-8 top-0 h-40 opacity-70" /><Bottle style={p.style} className="h-[78%] relative drop-shadow-[0_24px_20px_rgba(110,60,45,.3)]" title={`${p.name} with flowers`} /></Scene>,
-    <div key="c" className="w-full h-full"><SilkScene className="w-full h-full" /></div>,
+    <Scene key="a" tone="cream" className="w-full h-full grid place-items-center"><Bottle style={p.style} className="h-[88%]" title={p.name} /></Scene>,
+    <div key="b" className="w-full h-full"><SilkScene className="w-full h-full" /></div>,
+    <img key="c" src="/hero.jpg" alt="NEXAWEB perfume on marble with blush flowers" className="w-full h-full object-cover object-[30%_50%]" />,
   ]
   return (<>
     <Seo title={p.name} description={`${p.name} — ${p.tagline} ${p.family} eau de parfum by NEXAWEB.`} />

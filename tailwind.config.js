@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        ivory: '#FBF6F0', cream: '#F4EADF', champagne: '#C4A06A', gold: '#B38B4D',
+        ivory: '#FDF5F2', cream: '#F4EADF', champagne: '#C4A06A', gold: '#B38B4D',
         blush: '#EBCDC1', rose: '#C9998D', cocoa: '#6B4A3C', espresso: '#1E1613', ink: '#3A2A24',
       },
       fontFamily: {

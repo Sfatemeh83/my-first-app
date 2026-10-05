@@ -1,5 +1,4 @@
 import { useState, type FormEvent } from 'react'
-import { Flower } from './Scene'
 import { useStore } from '../context/Store'
 
 export default function Newsletter() {
@@ -11,11 +10,10 @@ export default function Newsletter() {
     setErr(''); setDone(true); setEmail(''); notify('Thank you — you are now subscribed')
   }
   return (
-    <section className="relative overflow-hidden bg-espresso text-ivory" aria-labelledby="nl-h">
-      <div className="absolute inset-0 pointer-events-none opacity-40" aria-hidden="true">
-        <Flower size={420} color="#7A3340" className="absolute -left-24 -top-20 rotate-12" />
-        <Flower size={520} color="#5E2A33" className="absolute -right-32 -bottom-40 -rotate-12" />
-        <Flower size={260} color="#8A4350" className="absolute right-1/4 -top-24 hidden md:block" />
+    <section className="relative overflow-hidden bg-[#2a1517] text-ivory" aria-labelledby="nl-h">
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <img src="/img/news-left.jpg" alt="" loading="lazy" className="absolute left-0 top-0 h-full w-[48%] object-cover opacity-90 [mask-image:linear-gradient(to_right,#000_40%,transparent)]" />
+        <img src="/img/news-right.jpg" alt="" loading="lazy" className="absolute right-0 top-0 h-full w-[48%] object-cover opacity-90 [mask-image:linear-gradient(to_left,#000_40%,transparent)]" />
       </div>
       <div className="relative container-x py-16 md:py-20 text-center">
         <h2 id="nl-h" className="text-3xl sm:text-4xl md:text-5xl text-ivory">Stay in the Scent of Luxury</h2>

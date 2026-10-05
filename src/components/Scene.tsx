@@ -26,7 +26,7 @@ export function Sprig({ className = '', color = '#B48B6A' }: { className?: strin
 export default function Scene({ children, tone = 'blush', className = '' }: { children?: ReactNode; tone?: 'blush' | 'cream' | 'rose' | 'dark'; className?: string }) {
   const bg = {
     blush: 'radial-gradient(circle at 70% 25%, #FBE9E0 0%, #F1D3C7 55%, #E4BBAE 100%)',
-    cream: 'radial-gradient(circle at 50% 30%, #FFFBF6 0%, #F7EEE4 70%, #EEDFD0 100%)',
+    cream: '#FDF5F2',
     rose: 'linear-gradient(135deg, #F3D6CB 0%, #E4B9AB 55%, #D2A090 100%)',
     dark: 'radial-gradient(circle at 50% 30%, #4A2F26 0%, #2A1B16 100%)',
   }[tone]

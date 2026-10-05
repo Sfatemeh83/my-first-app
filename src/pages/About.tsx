@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import Seo from '../components/Seo'
 import PageHeader from '../components/PageHeader'
 import Reveal from '../components/Reveal'
-import Scene, { Flower, Sprig } from '../components/Scene'
+import Scene from '../components/Scene'
 import Bottle from '../components/Bottle'
 import { SilkScene } from '../components/StorySection'
 import { IngredientArt } from './Ingredients'
@@ -18,12 +18,11 @@ const blocks = [
 
 function Art({ k, i }: { k: string; i: number }) {
   if (k === 'silk') return <SilkScene className="w-full h-full min-h-[320px]" />
+  if (k === 'flower') return <img src="/hero.jpg" alt="NEXAWEB perfume on marble with blush flowers" loading="lazy" className="w-full h-full min-h-[320px] object-cover object-[30%_50%]" />
   if (k === 'ing') return <IngredientArt tint="#E9BFB4" accent="#B5667A" i={i} />
   return (
-    <Scene tone={k === 'bottle2' ? 'dark' : k === 'sprig' ? 'cream' : 'blush'} className="w-full h-full min-h-[320px] grid place-items-center">
-      {k === 'flower' && <Flower size={200} className="absolute -left-10 bottom-0" />}
-      {k === 'sprig' && <Sprig className="absolute left-8 bottom-0 h-64 opacity-80" />}
-      <Bottle style={k === 'bottle2' ? 'oud' : k === 'sprig' ? 'blanc' : 'belle'} className="h-[75%] relative drop-shadow-[0_24px_20px_rgba(60,30,20,.3)]" title="NEXAWEB perfume bottle" />
+    <Scene tone="cream" className="w-full h-full min-h-[320px] grid place-items-center">
+      <Bottle style={k === 'bottle2' ? 'oud' : k === 'sprig' ? 'blanc' : 'belle'} className="h-[85%]" title="NEXAWEB perfume bottle" />
     </Scene>
   )
 }

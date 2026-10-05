@@ -1,22 +1,13 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import Scene, { Flower, Sprig } from './Scene'
-import Bottle from './Bottle'
 import Reveal from './Reveal'
 
-export function SilkScene({ className = 'min-h-[360px] md:min-h-[460px]' }: { className?: string }) {
+export function SilkScene({ className = 'min-h-[300px] md:min-h-[340px]' }: { className?: string }) {
   return (
-    <Scene tone="rose" className={className}>
-      <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <path d="M-20 220 C80 120 160 260 260 150 S380 80 430 130 L430 320 L-20 320Z" fill="#F7E1D6" opacity=".7" />
-        <path d="M-20 260 C60 200 150 300 250 220 S380 180 430 220 L430 320 L-20 320Z" fill="#F0CDBE" opacity=".8" />
-        <path d="M-20 160 C40 110 120 180 200 120" stroke="#fff" strokeOpacity=".5" fill="none" />
-      </svg>
-      <Sprig className="absolute left-[4%] bottom-0 h-44 opacity-80" color="#9B6B55" />
-      <Flower size={110} className="absolute left-[12%] top-[8%]" color="#F8DCD6" />
-      <Sprig className="absolute right-[6%] top-[4%] h-36 opacity-70 rotate-12" color="#B48B6A" />
-      <div className="absolute inset-0 grid place-items-center"><Bottle style="rose" className="h-[78%] rotate-[-16deg] drop-shadow-[0_24px_24px_rgba(110,60,45,.3)]" title="NEXAWEB perfume resting on silk" /></div>
-    </Scene>
+    <div className={`relative overflow-hidden ${className}`}>
+      <img src="/img/story.jpg" alt="NEXAWEB Eau de Parfum resting on blush silk with delicate dried and white flowers" loading="lazy" decoding="async"
+        className="absolute inset-0 h-full w-full object-cover object-[62%_50%]" />
+    </div>
   )
 }
 export default function StorySection() {
